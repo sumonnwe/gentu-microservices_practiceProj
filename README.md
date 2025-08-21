@@ -27,11 +27,12 @@ websites
 > $ ibmcloud ce app update --name listing --min 2
 ## 12. Run the following command to see if the listing application has scaled.
 > $ ibmcloud ce app get --name listing -q 
-.....
-Updating the microservice
+
+# Updating the microservice
 ## 1.  make changes in app.py
 ## 2. Run the following command to update the application
 > $ ibmcloud ce app update --name websites --image us.icr.io/${SN_ICR_NAMESPACE}/websites --registry-secret icr-secret --port 5000 --build-context-dir websites --build-source .
 ## 3. try to access end point
 > $ curl <your deplymenturl>/websites/Trinity
 ## 4. Scale the websites microservices to have 2 minimum instances 
+> $ ibmcloud ce app update --name websites --min 2
